@@ -7,7 +7,7 @@
     "postinstall": "bower install"
   },
   "devDependencies": {
-    "browser-sync": "2.11.2",
+    "browser-sync": "^2.11.2",
     "gulp": "git+https://git@github.com/gulpjs/gulp.git#4.0",
     "gulp-autoprefixer": "3.1.0",
     "gulp-cheerio": "^0.6.2",
@@ -26,6 +26,6 @@
     "rimraf": "2.5.2"
   },
   "dependencies": {
-    "normalize.css": "^4.1.1"
+    "normalize.css": "^4.2.0"
   }
 }
