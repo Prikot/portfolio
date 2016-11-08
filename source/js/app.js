@@ -102,7 +102,7 @@
       wScroll = $(window).scrollTop(),
       menu = $('.blog .blog-nav'),
       sidebar = $('.blog .blog-menu'),
-      stickyStart = sidebar.offset.top,
+      stickyStart = sidebar.offset().top,
       menuClone = sidebar.clone(),
       fixedSidebar = $('.fixed .left__col');
     
