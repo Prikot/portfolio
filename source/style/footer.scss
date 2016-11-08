@@ -1,79 +1,93 @@
-.footer-template {
-  width: 100%;
-  height: 140px;
-  margin-top: -180px;
-  color: white;
+.footer__up {
+  border: 5px solid transparent;
+  display: flex;
   background-color: rgba(54, 61, 64, 0.6);
+  height: 120px;
 
+}
+.footer {
+  width: 100%;
+  height: 170px;
+  margin-top: -154px;
+//  padding-bottom: 40px;
+  color: white;
+  z-index: 10000;
+  
   .left-part,
   .right-part,
   .center-part {
-    width: 33.2%;
-    display: inline-block;
-    border-right: 1px solid grey;
+    flex: 1;
+//    width: 33.2%;
+//    display: inline-block;
+    border-right: 2px solid grey;
     box-sizing: border-box;
     margin-left: -2px;
     padding-left: 32px;
-    margin-top: 18px;
-    vertical-align: middle;
+    padding-top: 18px;
+//    vertical-align: middle;
     font-size: 16px;
     line-height: 16px;
-    height:100%;
+//    height:100%;
   }
-
-  .center-part {
-    padding-bottom: 38px;
-
-    .nav-menu {
-      padding-left: 0;
-
+    .right-part {
+      border-right: none;
     }
-    .social-btns {
-      float: left;
+  .center-part {
+//    padding-bottom: 30px;
 
-      a {
-        margin-right: 20px;
-        i.fa-vk,
-        i.fa-github-alt,
-        i.fa-linkedin {
+    .nav {
+      padding-left: 0;
+      list-style: none;
+      margin: 0;
+      
+      .nav__item {
+        display: inline;
+        
+        .nav__link {
           color: white;
-          font-size: 28px;
-          line-height: 28px;
+          text-decoration: none;
+          &:hover {
+          color: navajowhite;
+          }
         }
       }
+
+    }
+    
+    .socials {
+//      padding-bottom: 30px;
+      float: left;
+      .socials__item {
+        list-style: none;
+        display: inline-block;
+        .socials__link {
+          padding: 10px;
+          i.fa-vk,
+          i.fa-github-alt,
+          i.fa-linkedin {
+            &:hover {
+              color: lightgray;
+            }
+            color: white;
+            font-size: 28px;
+            line-height: 28px;
+          }
+        }
+      } 
     }
   }
 
-  .right-part {
-    border-right: none;
-  }
 
-  .nav-menu {
-    list-style: none;
-    li {
-      display: inline;
-    }
-  }
+
 }
 
-.copyright {
-  width: 100%;
+.footer__down {
+  display: block;
   height: 40px;
   text-align: center;
   background-color: rgba(98, 140, 83, 0.85);
   line-height: 40px;
-  z-index: 10000;
 }
 
-.nav-menu-link {
-  color: white;
-  text-decoration: none;
-}
 
-.nav-menu-link:hover {
-  color: navajowhite;
-}
 
-.i-did {
-  line-height: 30px;
-}

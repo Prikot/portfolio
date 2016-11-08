@@ -1,25 +1,29 @@
-.footer-template
-  .left-part
-    p.i-did Это я сделал в рамках обучения в LoftSchool c первого раза
-  .center-part
-    ul.nav-menu
-      li
-        a.nav-menu-link(href="./myworks-new.html") Мои работы
-      li
-        a.nav-menu-link(href="./skills-new.html") Обо мне
-      li
-        a.nav-menu-link(href="./blog-new.html") Блог
-      li
-        a.nav-menu-link(href="./index.html") Авторизация
-    .social-btns
-      a.vk(href="#")
-        i.fa.fa-vk(aria-hidden="true")
-      a.git(href="#")
-        i.fa.fa-github-alt(aria-hidden="true")
-      a.in(href="#")
-        i.fa.fa-linkedin(aria-hidden="true")
-  .right-part
-    p.quote "Умные люди - не во всем умные люди!"
-      span.quote-auth
-        | - Александр
-.copyright Значок копирайта вот здесь вставлен не будет. И не с первого.
+.footer
+  .footer__up
+    .left-part Это я сделал в рамках обучения в LoftSchool
+    .center-part
+      ul.nav
+        li.nav__item
+          a.nav__link(href="./myworks-new.html") Мои работы
+        li.nav__item
+          a.nav__link(href="./skills-new.html") Обо мне
+        li.nav__item
+          a.nav__link(href="./blog-new.html") Блог
+        li.nav__item
+          a.nav__link(href="./index.html") Авторизация
+      .socials
+        ul.socials__list
+          li.socials__item
+            a(href="#").socials__link.socials__link_vk
+              i.fa.fa-vk(aria-hidden="true")
+          li.socials__item
+            a(href="#").socials__link.socials__link_git
+              i.fa.fa-github-alt(aria-hidden="true")
+          li.socials__item
+            a(href="#").socials__link.socials__link_in
+              i.fa.fa-linkedin(aria-hidden="true")
+    .right-part
+      p.quote "Умные люди - не во всем умные люди!"
+        span.quote-auth
+          | - Александр
+  .footer__down Значок копирайта вот здесь вставлен не будет.

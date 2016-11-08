@@ -1,61 +1,45 @@
-//.real-bg {
-// top: -5px;
-//}  
+.wrapper {  
+  background-image: url("../img/form_back.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+}
 
-.my-work {
-  z-index: 10;
-  background-image: url('../img/form_back.png');
-  background-position-y: -600px;
+.content {
+//  margin-bottom: -50px;
+//  padding-top: 50px;
+}
 
-  &:after {
-    display: table;
-    clear: both;
-    content: "";
-  }
-  .page-title {
+.page-title {
     text-align: center;
     font-size: 63px;
     line-height: 63px;
     z-index: 11;
+    margin-top: 30px;
   }
-
-  .horizontal-line {
+.horizontal-line {
     border: none;
     background-color: black;
     width: 90px;
     height: 3px;
     margin-bottom: 36px;
   }
-  .works-block {
-    height: 750px;
-    margin-bottom: 75px;
+ 
+.works {
+  height: 750px;
+  display: flex;
 
-    &:after {
-      display: table;
-      clear: both;
-      content: "";
-    }
-
-    .description {
-      float: left;
-      position: relative;
-      display: table-cell;
-      text-align: center;
-      vertical-align: middle;
-      width: 50%;
-      min-height: 750px;
+    .works__description {
+      display: flex;
+      justify-content: center;
+      flex: 1;
       background-color: rgb(235, 239, 226);
-
-      .description-inner {
-        display: inline-block;
-
-        //&:before {
-        //  height: 100%;
-        //  content: "";
-        //  display: inline-block;
-        //  vertical-align: middle;
-        //}
-        .work-title {
+      .works__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .work__title {
           width: 360px;
           margin: 0 auto;
           margin-bottom: 30px;
@@ -69,7 +53,7 @@
           margin-bottom: 25px;
         }
 
-        .work-description {
+        .work__description {
           font-size: 16px;
           line-height: 24px;
           margin-bottom: 20px;
@@ -78,7 +62,7 @@
           color: rgb(108, 156, 90);
 
         }
-        .work-site {
+        .work__site {
           display: block;
           background-image: url('../img/link.png');
           background-repeat: no-repeat;
@@ -94,117 +78,117 @@
           text-decoration: none;
           background-color: rgb(108, 156, 90);
         }
-
       }
+      
     }
-    .presentation {
-      position: relative;
-      float: left;
-      display: inline-block;
-      width: 50%;
-      min-height: 750px;
+    
+    .works__slider {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
       background-color: rgb(225, 228, 215);
-
-      .presentation-inner {
-        position: absolute;
-        width: 100%;
-        padding-top: 65px;
-
-        .big-demo {
-          margin-bottom: 85px;
+      .works__slider-big-demo {
+        margin-bottom: 85px;
           img {
             display: block;
             margin: 0 auto;
+          }
+      }
+      .works__slider-small-demo {
+        display: flex;
+        flex-direction: row;
 
+        .small-demo__left {
+          flex: 1;
+          height: 250px;
+          background-image: url("../img/slide_down.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          max-width: 100%;
+          .small-demo__pic {
+            flex: 1;
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;  
+            }
+          }
+        }
+        .small-demo__right {
+          flex: 1 ;
+          height: 250px;
+          max-width: 100%;
+          background-image: url("../img/slide_up.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+
+          .small-demo__pic {
+            flex:1;
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
           }
         }
       }
-    }
-  }
-
-  .small-demo {
-    width: 100%;
-    margin: 0 auto;
-    font-size: 0;
-
-    &:after {
-      display: table;
-      clear: both;
-      content: "";
-    }
-
-    .arrow {
-      position: absolute;
-      left: 158px;
-      top: 65px;
-    }
-
-    .small-demo-left {
-      position: relative;
-      width:50%;
-      display: inline;
-      float: left;
-
-      .small-demo-pic {
-        max-width: 100%;
-      }
-
-    }
-    .small-demo-right {
-      position: relative;
-      width: 50%;
-      display: inline;
-      float: left;
-
-      .small-demo-pic {
-        max-width: 100%;
-
-      }
-    }
-  }
 }
 
+
 .aboutme-block {
-  width: 54%;
+  display: flex;
+  flex-direction: column;
+//  width: 54%;
   margin: 0 auto 70px auto;
 
-  &:after {
-    display: table;
-    clear: both;
-    content: "";
-  }
+//  &:after {
+//    display: table;
+//    clear: both;
+//    content: "";
+//  }
 
 
   .aboutme-title {
     width: 500px;
     font-size: 50px;
     margin: 0 auto;
+    margin-top: 50px;
     text-align: center;
     text-transform: uppercase;
 
   }
   .aboutme-people {
-    display: inline;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     margin-bottom: 70px;
 
-    &:after {
-      display: table;
-      clear: both;
-      content: "";
-    }
+//    &:after {
+//      display: table;
+//      clear: both;
+//      content: "";
+//    }
 
     .aboutme-people-left {
-      float: left;
+//      flex: 1;
+//      justify-content: flex-end;
+//      float: left;
       font-size: 16px;
       line-height: 24px;
-      width: 49%;
+      width: 30%;
       text-align: center;
     }
     .aboutme-people-right {
+//      margin-left:100px;
       font-size: 16px;
       line-height: 24px;
-      float: right;
-      width: 49%;
+//       flex: 1;
+       width: 30%;
+
+//      justify-content: flex-start;
+//      float: left;
+//      width: 49%;
       text-align: center;
     }
 
@@ -268,7 +252,7 @@
       border: none;
       margin-left: 20px;
       margin-right: 20px;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       padding-left: 20px;
       vertical-align: top;
     }
@@ -310,4 +294,8 @@
   top: -200px;
   right: -700px;
   position: relative;
+}
+
+.triangle {
+  fill: white !important;
 }

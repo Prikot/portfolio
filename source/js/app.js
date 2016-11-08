@@ -1,3 +1,6 @@
+/*jslint browser: true*/
+/*global $, jQuery, alert*/
+
 // blog
 // .sidebar =
 // .static        -> .blog
@@ -56,9 +59,8 @@
 
 
 
-
-  (function() {
-    'use strict';
+(function () {
+  'use strict';
 
     // var authModule = (function () {
     //   var authBtn = $('.autorize-btn'),
@@ -95,62 +97,61 @@
     // }());
 
 
-    $(window).scroll(function() {
-      var
-          wScroll = $(window).scrollTop(),
+  $(window).scroll(function () {
+    var
+      wScroll = $(window).scrollTop(),
+      menu = $('.blog .blog-nav'),
+      sidebar = $('.blog .blog-menu'),
+      stickyStart = sidebar.offset.top,
+      menuClone = sidebar.clone(),
+      fixedSidebar = $('.fixed .left__col');
+    
+    changeActiveOnScroll(wScroll);
+    
+    if (wScroll >= stickyStart) {
 
-          menu = $('.blog .blog-nav'),
-          sidebar = $('.blog .blog-menu'),
-          stickyStart = sidebar.offset().top,
-          menuClone = sidebar.clone(),
-          fixedSidebar = $('.fixed .left__col');
-      changeActiveOnScroll(wScroll);
-      if (wScroll >= stickyStart) {
-
-        if (!fixedSidebar.find('.blog-menu').length) {
-          fixedSidebar.append(menuClone);
-          menu.hide();
-        }
-
-
-      } else {
-        fixedSidebar.find('.blog-menu').remove();
-        menu.show();
+      if (!fixedSidebar.find('.blog-menu').length) {
+        fixedSidebar.append(menuClone);
+        menu.hide();
       }
 
 
-
-    });
-
-    function changeActiveOnScroll(wScroll) {
-        var sections = $('.blog-news li');
-        $.each(sections, function () {
-          var $this = $(this),
-          windowMargin = $(window).height() / 2,
-          topEdge = $this.offset().top - windowMargin,
-          bottomEdge = topEdge + $this.height();
-        if(wScroll > topEdge && wScroll < bottomEdge) {
-          var index = $this.index();
-
-          $('.blog-nav').each(function () {
-            var $this = $(this);
-            $this.find('.blog-side__item')
-                .eq(index)
-                .addClass('active')
-                .siblings()
-                .removeClass('active');
-
-          })
-        }
-      })
-
+    } else {
+      fixedSidebar.find('.blog-menu').remove();
+      menu.show();
     }
 
-    var wScroll = $(window).scrollTop();
-    changeActiveOnScroll(wScroll);
 
 
-  })();
+  });
+
+  function changeActiveOnScroll(wScroll) {
+    var sections = $('.blog-news li');
+    $.each(sections, function () {
+      var $this = $(this),
+        windowMargin = $(window).height() / 2,
+        topEdge = $this.offset().top - windowMargin,
+        bottomEdge = topEdge + $this.height();
+      if (wScroll > topEdge && wScroll < bottomEdge) {
+        var index = $this.index();
+
+        $('.blog-nav').each(function () {
+          var $this = $(this);
+          $this.find('.blog-side__item')
+              .eq(index)
+              .addClass('active')
+              .siblings()
+              .removeClass('active');
+
+        });
+      }
+    });
+
+  }
+
+  var wScroll = $(window).scrollTop();
+  changeActiveOnScroll(wScroll);
+})();
 
 
 

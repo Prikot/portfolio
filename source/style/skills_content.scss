@@ -1,58 +1,47 @@
+.content {
+  margin-top: 15px;
+}
+
 .skills {
   width: 100%;
-
-  &:after {
-    display: table;
-    clear: both;
-    content: "";
-  }
-
+  display: flex;
+  flex-direction: row;
+ 
   .content-left {
-    float: left;
-    position: relative;
-    display: inline-block;
+    display: flex;
+    flex: 1;
     width: 50%;
     min-height: 750px;
     background-color: rgb(235, 239, 226);
 
-    &:after {
-      display: table;
-      clear: both;
-      content: "";
-    }
-
     .aboutme {
-      float: left;
-      position: relative;
-      display: inline-block;
+     display: flex;
+      flex: 1;
       width: 50%;
-      min-height: 750px;
+      justify-content: center;
 
       .aboutme__title {
-        text-align: center;
         color: rgb(55, 62, 66);
         font-size: 63px;
         line-height: 63px;
         background-image: url('../img/about_header_back.png');
         background-position: 40px -20px;
-        background-size: 80%;
+        background-size: 100%;
         background-repeat: no-repeat;
 
       }
 
     }
     .aboutme-description {
-      float: left;
-      position: relative;
-      display: inline-block;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
       width: 50%;
-      min-height: 830px;
 
       .aboutme-description__image {
         margin-top: 15px;
         margin-right: 20px;
-        width: 100%;
-        height: auto;
+        max-width: 100%;
       }
       .aboutme-description__title {
         text-align: center;
@@ -72,15 +61,15 @@
   }
 
   .content-right {
-    float: left;
-    position: relative;
-    display: inline-block;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 50%;
-    min-height: 830px;
     background-color: rgb(244, 245, 240);
 
     .skills-items__title {
-      text-align: center;
       font-size: 35px;
       line-height: 35px;
       color: rgb(86, 99, 88);
@@ -93,7 +82,6 @@
       font-size: 16px;
       line-height: 1.5;
       color: rgb(86, 99, 88);
-      text-align: center;
       padding: 0 20px;
 
     }
@@ -104,27 +92,27 @@
       color: rgb(86, 99, 88);
     }
     .skills-circles {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
       margin-left: -20px;
       list-style: none;
       .circle-wrap {
-        position: relative;
-        width: 125px;
-        height: 125px;
-        margin-left: 50px;
-        display: inline-block;
-
+        display:flex;
+        flex: 1;  
+        justify-content: center;
+        align-items: center;
+        min-width: 125px;
+        margin-left: 30px;
 
         .circle-text {
+          position: absolute;
           width: auto;
           font-size: 14px;
-          /* height: 50px; */
-          position: absolute;
-          left: 20%;
-          top: 36%;
-          bottom: 0;
-          right: 0;
           white-space: normal;
           color: rgb(116, 161, 99);
+//          z-index: 1000;
         }
       }
       circle {
@@ -147,7 +135,7 @@
   border: none;
   width: 90px;
   height: 3px;
-  margin-bottom: 36px;
+  margin-bottom: 0;
   background-color: rgb(55, 62, 66);
 }
 
@@ -178,10 +166,18 @@
   }
 }
 
-.footer-template {
+.footer {
   position: relative;
 }
 
-.copyright {
+.footer__down {
   position: relative;
+}
+
+polygon:first-child {
+  fill: #ebefe2;
+}
+
+polygon:last-child {
+  fill: rgb(244, 245, 240);
 }
