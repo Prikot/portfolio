@@ -14,7 +14,9 @@
     include ../includes/_menu
   .avatar
     img(src="assets/img/avatar.png", alt="Logo").avatar__photo
-    block header-title 
+    block header-title
+    a#avatar__link(href="#content")
+      img(src="assets/img/arrow_down.png", alt="Logo").avatar__arrow
   .box
     svg.triangle(xmlns="http://www.w3.org/2000/svg", viewbox="0 0 1000 85", preserveaspectratio="none")
       polygon(points="0,0   0,85   500.8,85   500.8,75.5")

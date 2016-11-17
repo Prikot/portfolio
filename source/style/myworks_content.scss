@@ -26,12 +26,15 @@
   }
  
 .works {
-  height: 750px;
   display: flex;
+  flex-wrap: wrap;  
 
     .works__description {
       display: flex;
       justify-content: center;
+      min-width: 400px;
+        height: 750px;
+
       flex: 1;
       background-color: rgb(235, 239, 226);
       .works__item {
@@ -85,6 +88,9 @@
     .works__slider {
       display: flex;
       flex-direction: column;
+      min-width: 400px;
+        height: 750px;
+
       flex: 1;
       background-color: rgb(225, 228, 215);
       .works__slider-big-demo {
@@ -214,9 +220,11 @@
 }
 .contact-form {
   .contact-form-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding-top: 40px;
-    text-align: center;
-    margin: 0 auto 270px auto;
+    margin: 0 auto 50px auto;
     width: 385px;
     height: 465px;
     border-radius: 5px;
@@ -289,11 +297,26 @@
     }
   }
 }
-.arrow-up-footer {
-  border: 0;
-  top: -200px;
-  right: -700px;
-  position: relative;
+
+.arrow-up {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  .arrow-up__img {
+    border: 0;
+    margin-top: 0px;
+    width: 45px;
+  height: 30px;
+//    width: 50px;
+//    height: 50px;
+  //  top: -200px;
+  //  right: -700px;
+  //  position: relative;
+    .arrow-up__link:hover {
+      opacity: 0.8;
+    }
+  }
+  
 }
 
 .triangle {

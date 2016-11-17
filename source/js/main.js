@@ -1,20 +1,24 @@
-/**
- * Created by aleksandr on 02.07.16.
- */
-(function () {
 
-    var elems = document.getElementsByTagName("p");
-    // classElems = document.getElementsByClassName("paragraph");
-    // idElem = document.getElementById("four");
-    // console.log(idElem);
+//(function () {
+//    var elems = document.getElementsByTagName("p");
+//    
+//    for (var i = 0, len = elems.length; i < len; i++) {
+//        
+//
+//    }
+//     console.log(document.querySelector("div").innerHTML);
+//    
+//})();
 
-    for (var i = 0, len = elems.length; i < len; i++) {
-        // console.log(document.querySelector("div").childNodes);
+ 
+$(document).ready(function () {
+	$("#avatar__link").on("click", function (event) {
+		event.preventDefault();
+		var id  = $(this).attr("href"),
+			top = $(id).offset().top;
+		
+		$('body,html').animate({scrollTop: top}, 1500);
+	});
+});
 
 
-    }
-    // console.log(document.querySelector("div").lastChild);
-    // console.log(document.querySelector("div").firstChild);
-    console.log(document.querySelector("div").innerHTML);
-    // console.log(elems[i].parentNode);
-})();

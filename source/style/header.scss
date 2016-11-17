@@ -71,6 +71,16 @@
       font-size: 16px;
       line-height: 16px;
       margin-top: 0;
+      margin-bottom: 50px;
+    }
+    
+    #avatar__link {
+      outline: none;
+      .avatar__arrow {
+        &:hover {
+          opacity: 0.8;
+        }
+      }
     }
   }
     .box {
