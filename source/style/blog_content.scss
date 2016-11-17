@@ -15,11 +15,6 @@
             li {
                 list-style: none;
                 text-align: left;
-                //border-right: 2px solid rgb(162, 190, 146);
-                //&.active {
-                //    border-right: 2px solid rgb(162, 190, 146);
-                //
-                //}
             }
         }
     }
@@ -82,12 +77,22 @@ h2 {
 
 }
 
+
+
 .blog-side__item a {
     box-sizing: border-box;
+  justify-content: left;
+  align-items: center;
+  display: flex;
     padding: 5px 30px 5px 0;
-    width: 120px;
-    display: block;
+    height: 35px;
+    width: 140px;
+    color: black;
     text-decoration: none;
+}
+
+.blog-side__item a:visited {
+    color: black;
 }
 
 .blog-side__item a:hover {
@@ -98,4 +103,25 @@ h2 {
     padding-top: 35px;
     padding-left: 30px;
 }
+
+
+ @media only screen and (max-width: 800px) {
+  .blog .blog-menu {
+    display: none;
+  }
+   
+   .left__col .blog-menu {
+    display: none;
+  }
+  
+  .blog .blog-content {
+    width: 100%;
+  }
+   
+   .blog .blog-content .blog-news {
+     margin-left: 20px;
+   }
+}
+
+
 
