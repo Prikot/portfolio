@@ -1,32 +1,57 @@
 .body_background {
   display: flex;
+  min-height: 100vh;
   flex-direction: column;
-}
+  
+  .wrapper {
+    flex: 1;
+    display: flex;
+    
+    .header__index {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
 
-.wrapper {
-  flex: 1;
-}
-
-.header__index {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-
-  .autorize-btn {
-    margin-left: auto;
-    margin-top: 25px;
-    margin-right: 100px;
-    font-size: 16px;
-    line-height: 16px;
-    color: white;
-    text-decoration: none;
-    border-radius: 40px;
-    padding: 14px 28px 14px 28px;
-    border: 1px solid white;
+      .autorize-btn {
+        margin-left: auto;
+        margin-top: 25px;
+        margin-right: 70px;
+        font-size: 16px;
+        line-height: 16px;
+        color: white;
+        text-decoration: none;
+        border-radius: 40px;
+        padding: 14px 28px 14px 28px;
+        border: 1px solid white;
+      }
+    }
+    
+    .flip-card {
+      flex: 1;
+      align-self: center;
+      display: flex;
+      perspective: 1000px;
+      transform-style: preserve-3d;
+      width: 380px;
+      height: 400px;
+      cursor: pointer;
+      
+      .card {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        transform-style: preserve-3d;
+        transition: all 600ms;
+        z-index: 20;
+      }
+    } 
   }
 }
+
+
+
+
+
 
 .front {
   width: 35%;
@@ -203,7 +228,12 @@
   }
 
   label[for="captcha"] {
-    line-height: 20px;
+    display: flex;
+    align-items: center;
+    
+     &::selection {
+      background: transparent; /* Safari */
+    }
 
   }
 
@@ -221,10 +251,9 @@
   .captcha-checkbox {
     display: flex;
     flex-direction: row;
-    align-items: top;
     justify-content: center;
     margin-bottom: 20px;
-    margin-top: 10px;
+    margin-top: 20px;
     max-height: 20px;
   }
 
@@ -241,6 +270,10 @@
   label[for="no-in"] {
     color: white;
     padding-left: 25px;
+    
+    &::selection {
+      background: transparent; /* Safari */
+    }
   }
 
   .captcha-question-radio {
@@ -281,9 +314,6 @@
     background-color: rgb(108, 156, 90);
   }
 
-  label[for='captcha'] {
-    margin-bottom: 20px;
-  }
 
   .captcha-question {
     margin-bottom: 20px;
@@ -330,56 +360,24 @@
 
 //переворот карточки
 
-.flip-card {
-  -webkit-perspective: 1000px;
-   -moz-perspective: 1000px;
-  perspective: 1000px;
-  -webkit-transform-style: preserve-3d;
-   -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  display: block;
-  width: 380px;
-  height: 400px;
-  position: relative;
-  margin: 0 auto;
-  cursor: pointer;
-}
 
-.card {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  -webkit-transform-style: preserve-3d;
-   -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-transition: all 600ms;
-   -moz-transition: all 600ms;
-  transition: all 600ms;
-  z-index: 20;
-}
 
 .card>div {
   position: absolute;
   height: 100%;
   width: 100%;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
 .card .back {
-  -webkit-transform: rotateY(180deg);
-   -moz-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
 .card-rotate {
   display: none;
-   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
 .card-rotate:checked + .card {
   transform: rotateY(180deg);
-  -webkit-transform: rotateY(180deg);
-   -moz-transform: rotateY(180deg);
 }

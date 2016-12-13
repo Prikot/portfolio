@@ -2,15 +2,13 @@ extends ../main_template
 
 block link-css
   link(href="assets/css/header.css", rel="stylesheet")
-  link(href="assets/css/myworks_content.css", rel="stylesheet")
   link(href="assets/css/footer.css", rel="stylesheet")
+  link(href="assets/css/blog_content.css", rel="stylesheet")
 block page-header
-  include ../includes/_myworks-header
+  include ../includes/_blog-header
 block content
-  include ../includes/_myworks-content
+  include ../includes/_blog-content
 block footer
-  include ../includes/_footer
-
-
+  include ../common/_footer
 
 
