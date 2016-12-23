@@ -1,6 +1,8 @@
 var map;
 
 function initMap() {
+    'use strict';
+
     var styles = [
             {
                 "featureType": "administrative",
@@ -80,7 +82,7 @@ function initMap() {
                     }
                 ]
             }
-    ];
+        ];
     var styledMap = new google.maps.StyledMapType(styles,
         {name: "Styled Map"});
 

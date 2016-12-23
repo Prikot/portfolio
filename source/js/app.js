@@ -12,7 +12,7 @@
       stickyStart = sidebar.offset().top,
       menuClone = sidebar.clone(),
       fixedSidebar = $('.fixed .left__col');
-    
+
     changeActiveOnScroll(wScroll);
     
     if (wScroll >= stickyStart) {
