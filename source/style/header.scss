@@ -1,47 +1,24 @@
   .head-container {
-    //height: 600px;
     color: white;
     display: flex;
     flex-direction: column;
-    margin: 0;
- background: url('../img/back.png') 0 0 no-repeat;
+    //margin: 0;
+    background: url('../img/back.png') 0 0 no-repeat;
         background-position: center top;
         -webkit-background-size: cover;
         background-size: cover;
     
     .header {
-    &:after {
-      display: table;
-      clear: both;
-      content: "";
-    }
-    .socials {
-      margin-bottom: 38px;
-      float: left;
-      .socials__item {
-        list-style: none;
-        display: inline-block;
-        .socials__link {
-          padding: 10px;
-          i.fa-vk,
-          i.fa-github-alt,
-          i.fa-linkedin {
-            &:hover {
-              color: lightgray;
-            }
-            color: white;
-            font-size: 28px;
-            line-height: 28px;
-          }
-        }
+    display: flex;
+      .socials__list {
+        display: flex;
+        flex-direction: row;
       }
-      
-    }
   }
 
   .avatar {
     text-align: center;
-//    height: 130px;
+    //height: 130px;
 
     .avatar__photo {
       border-radius: 50%;
@@ -91,18 +68,10 @@
       
       .triangle {
         height: 100%;
-      flex: 1;
-      fill: rgb(250, 248, 240);
+        flex: 1;
+        fill: rgb(250, 248, 240);
     }
       
     }
     
   }
-
-//@media (max-width: 430px) {
-//  .head-container {
-//    height: 600px;
-//    color: white;
-//    margin: 0 0 40px 0;
-//  }
-//}
