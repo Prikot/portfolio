@@ -1,4 +1,4 @@
-$)(function() {
+$(function() {
   $('.slider__controls-top').on('click', function (e) {
     e.preventDefault();
     

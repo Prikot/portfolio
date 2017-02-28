@@ -5,13 +5,18 @@
   'use strict';
 
   $(window).scroll(function () {
-    var
-      wScroll = $(window).scrollTop(),
-      menu = $('.blog .blog-nav'),
-      sidebar = $('.blog .blog-menu'),
-      stickyStart = sidebar.offset().top,
-      menuClone = sidebar.clone(),
-      fixedSidebar = $('.fixed .left__col');
+    var  sidebar = $('.blog .blog-menu')
+    if(sidebar.length) {
+      var
+          wScroll = $(window).scrollTop(),
+          menu = $('.blog .blog-nav'),
+          stickyStart = sidebar.offset().top,
+          menuClone = sidebar.clone(),
+          fixedSidebar = $('.fixed .left__col');
+    }
+
+
+
 
     changeActiveOnScroll(wScroll);
     

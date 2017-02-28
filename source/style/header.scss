@@ -4,15 +4,49 @@
     flex-direction: column;
     //margin: 0;
     background: url('../img/back.png') 0 0 no-repeat;
-        background-position: center top;
-        -webkit-background-size: cover;
-        background-size: cover;
+    background-position: center top;
+    -webkit-background-size: cover;
+    background-size: cover;
     
     .header {
     display: flex;
-      .socials__list {
-        display: flex;
-        flex-direction: row;
+
+      div.socials {
+
+        .socials__list {
+          display: flex !important;
+          justify-content: center;
+          flex-direction: row;
+          flex-wrap: wrap;
+          max-width: 100%;
+          padding-left: 0;
+
+        }
+
+        .socials__item {
+          display: flex;
+          flex-direction: row;
+          list-style: none;
+          width: 10px;
+          height: 10px;
+          margin-left: 40px;
+          //background-color: red;
+
+          .socials__link {
+            padding: 10px;
+            i.fa-vk,
+            i.fa-github-alt,
+            i.fa-linkedin {
+              &:hover {
+                color: lightgray;
+              }
+              color: white;
+              font-size: 28px;
+
+              line-height: 28px;
+            }
+          }
+        }
       }
   }
 
